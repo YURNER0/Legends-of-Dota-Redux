@@ -6,6 +6,7 @@
 		"dota/game/resource",
 		"dota/game/scripts",
 		"dota/game/scripts/npc",
+		"dota/game/scripts/tools",
 		"dota/game/scripts/npc/abilities",
 
 		"dota/game/panorama",
@@ -39,6 +40,7 @@
 
 		{ "link": "../dota/game/addoninfo.txt", "dir": "../src/game/addoninfo.txt" },
 
+		{ "link": "../dota/game/scripts/tools", "dir": "../src/game/scripts/tools" },
 		{ "link": "../dota/game/scripts/custom_events.txt", "dir": "../src/game/scripts/custom_events.txt" },
 		{ "link": "../dota/game/scripts/stat_collection.kv", "dir": "../src/game/scripts/stat_collection.kv" },
 		{ "link": "../dota/game/scripts/custom_net_tables.txt", "dir": "../src/game/scripts/custom_net_tables.txt" },
