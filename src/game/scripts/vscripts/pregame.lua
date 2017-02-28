@@ -836,6 +836,30 @@ function Pregame:onThink()
             end
         end
 
+        if not self.sentMostUsedAbilities then
+            self.sentMostUsedAbilities = true
+            for playerID=0,DOTA_MAX_TEAM_PLAYERS-1 do
+                local ply = PlayerResource:GetPlayer(playerID)
+                if ply then
+                    localStorage:getKey(playerID, "redux_stats", "abString", function (sequenceNumber, success, value)
+                        local abString = value or ""
+                        local values = {}
+                        if success then
+                            values = util:split(abString, ";")
+                        end
+
+                        local result = {}
+
+                        for k,v in pairs(values) do
+                            result[v] = true
+                        end
+
+                        CustomGameEventManager:Send_ServerToPlayer(ply,"lodSendMostUsedAbilities",result)
+                    end)
+                end
+            end
+        end
+
         if not self.Announce_Picking_Phase then
             self.Announce_Picking_Phase = true
             if OptionManager:GetOption("memesRedux") == 1 then
@@ -4383,6 +4407,32 @@ function Pregame:onPlayerSaveStats(playerID, abilities)
     if PlayerResource:GetSteamAccountID(playerID) == 0 then
         return
     end
+
+    localStorage:getKey(playerID, "redux_stats", "abString", function (sequenceNumber, success, value)
+        local abString = value or ""
+        local values = {}
+        if success then
+            values = util:split(abString, ";")
+        end
+
+        for k,v in pairs(values) do
+            for id,abName in pairs(abilities) do
+                if v == abName then
+                    abilities[id] = ""
+                end
+            end
+        end
+
+        for k,v in pairs(abilities) do
+            if v and not string.match(v, "npc_dota_hero_") then
+                abString = abString..v..";"
+            end
+        end
+
+        localStorage:setKey(playerID, "redux_stats", "abString", abString, function (sequenceNumber, success)
+
+        end)
+    end)
 
     local i = 1
     local function statsQueue()

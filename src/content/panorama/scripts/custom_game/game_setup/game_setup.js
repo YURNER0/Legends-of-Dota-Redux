@@ -64,6 +64,7 @@ var abilityHeroOwner = {};
 // Ability Data
 var flagData = {}
 var flagDataInverse = {}
+var mostUsedAbilities = {};
 
 // Used to make data transfer smoother
 var dataHooks = {};
@@ -129,6 +130,7 @@ var preloadedHeroPanels = {};
 // Should we show banned / disallowed skills?
 var showBannedSkills = false;
 var showDisallowedSkills = false;
+var showMostUsedSkills = false;
 var showTakenSkills = true;
 var showNonDraftSkills = false;
 var useSmartGrouping = true;
@@ -1669,6 +1671,13 @@ function toggleShowDisallowed() {
     calculateFilters();
 }
 
+function toggleShowMostUsed() {
+    showMostUsedSkills = !showMostUsedSkills;
+
+    // Update filters
+    calculateFilters();
+}
+
 function toggleShowTaken() {
     showTakenSkills = !showTakenSkills;
 
@@ -2177,6 +2186,12 @@ function getSkillFilterInfo(abilityName) {
                 shouldShow = showTier[i] && shouldShow;
                 break;
             }
+        }
+    }
+
+    if (showMostUsedSkills) {
+        if (!mostUsedAbilities[abilityName]) {
+            shouldShow = false;
         }
     }
 
@@ -5304,6 +5319,10 @@ function loadPlayerBans() {
     GameEvents.Subscribe('lodCustomTimer', function (data) {
         endOfTimer = data.endTime;
         freezeTimer = data.freezeTimer ? data.freezeTimer : -1;
+    })
+
+    GameEvents.Subscribe('lodSendMostUsedAbilities', function (data) {
+        mostUsedAbilities = data;
     })
     
     // Search handler
