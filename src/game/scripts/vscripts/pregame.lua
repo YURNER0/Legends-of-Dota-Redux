@@ -489,7 +489,7 @@ function Pregame:init()
         OptionManager:SetOption('banningTime', 50)
         self:setOption('lodOptionBalanceMode', 0, true)
         self:setOption('lodOptionGameSpeedGoldModifier', 150, true)
-        self:setOption('lodOptionGameSpeedEXPModifier', 200, true)
+        self:setOption('lodOptionGameSpeedEXPModifier', 150, true)
         self:setOption('lodOptionAdvancedHidePicks', 0, true)
         self:setOption('lodOptionCommonMaxUlts', 2, true)
         self:setOption('lodOptionGameSpeedRespawnTimePercentage', 35, true)
@@ -6995,7 +6995,7 @@ function Pregame:fixSpawnedHero( spawnedUnit )
     }
 
     local disabledPerks = {
-        --npc_dota_hero_disruptor = true,
+        npc_dota_hero_windrunner = true,
         npc_dota_hero_shadow_demon = true,
         -- npc_dota_hero_spirit_breaker = true,
         --npc_dota_hero_spirit_slardar = true,
