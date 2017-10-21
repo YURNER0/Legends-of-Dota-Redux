@@ -9,12 +9,12 @@
 		"AbilitySpecial" {
 			"01" {
 				"var_type" "FIELD_INTEGER"
-				"bash_chance" "10"
+				"bash_chance" "3"
 			}
 
 			"02" {
 				"var_type" "FIELD_FLOAT"
-				"stun_hero_duration" "0.5"
+				"stun_hero_duration" "0.3"
 			}
 		}
 
