@@ -977,7 +977,7 @@
     "lodFailedTrollCombo"                           "'{ab1}' нельзя выбрать вместе с '{ab2}', эта комбинация запрещена."
     "lodFailedUnknownCategory"                      "'{ab}' не относится к действующей категории навыков. (Вы увидите эту ошибку только если LoD сконфигурировался некорректно)."
     "lodFailedBannedCategory"                       "'{ab}' это часть '{cat}' категории, которая не разрешена в этом матче, так что поиздеваться над игроками не выйдет."
-    "lodFailedAlreadyGotSkill"                      "'{abilityName}' уже есть в вашей сборке. Нельзя выбрать ту же способность дважды"
+    "lodFailedAlreadyGotSkill"                      "'{abilityName}' уже есть в вашей сборке. Нельзя выбрать ту же способность дважды."
     "lodFailedSkillIsBanned"                        "Способность'{abilityName}' запрещена."
     "lodFailedHeroIsBanned"                         "Герой'{heroName}' запрещен."
     "lodFailedSwapSlotSameSlot"                     "Нельзя менять слот на тот же слот."
