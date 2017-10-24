@@ -460,7 +460,7 @@
 
     "lodOptionLimitPassives"                                  "Лимит пассивных способностей"
     "lodOptionDesLimitPassives"                               "Включить лимит пассивных способностей"
-    "lodOptionAboutLimitPassives"                             "Эта опция заставит игроков брать не более 3 пассивных способностей, включая и полупассивные(Например: Empower и Vampiric Aura)."
+    "lodOptionAboutLimitPassives"                             "Эта опция заставит игроков брать не более 3 пассивных способностей, включая и полупассивные (Например: Empower и Vampiric Aura)."
     "lodMutatorLimitPassives"                                 "Лимит пассивных способностей"
     
     "lodOptionDesAdvancedHeroAbilities"             "Разрешить способности героев"
@@ -1259,7 +1259,7 @@
     "unique_mechanic_morphling"                              "Morphling получает 50% к скорости передвижения, когда передвигается по воде"
     "unique_mechanic_monkey_king"                              "В начале игры Monkey King получает 1 уровень <font color=\'#ffd966\'>Jingu Mastery</font>, независимо от того, есть она или нет."
     "unique_mechanic_naga_siren"                        "<font color=\'#ffd966\'>Иллюзии</font> создающие способности вернут 50% манакоста и перезаряюжаются на 20% быстрее."
-    "unique_mechanic_furion"                        "Перезарядка <font color=\'#ffd966\'>способностей телепортации</font>(Всех, похожих на его родную способность) снижена на 50% для Nature's Prophet."
+    "unique_mechanic_furion"                        "Перезарядка <font color=\'#ffd966\'>способностей телепортации</font> (Всех, похожих на его родную способность) снижена на 50% для Nature's Prophet."
     "unique_mechanic_necrolyte"                        "В начале игры Necrophos получает 1 уровень <font color=\'#ffd966\'>Heartstopper Aura</font>, независимо от того, есть она или нет. "
     "unique_mechanic_night_stalker"                 "<font color=\'#ffd966\'>Aghanim's Scepter</font> дает Night Stalker неограниченную видимость ночью."
     "unique_mechanic_nyx_assassin"                        "Nyx Assassin двигается быстрее на 10% во время невидимости."
